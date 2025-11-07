@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<!--
+╔══════════════════════════════════════════════════════════════════╗
+║                    TWY's Channel - 相册库                          ║
+║                                                                    ║
+║  📖 相册使用指南（支持大量图片）：                                    ║
+║  ─────────────────────────────────────────────────────────        ║
+║  1️⃣ 批量添加照片（推荐）：                                            ║
+║     找到页面底部的 const photos = [...] 数组（约375行）              ║
+║     按照格式添加：['图片路径', '标题', '描述']                        ║
+║     想加多少就加多少！                                               ║
+║                                                                    ║
+║  2️⃣ 图片路径格式：                                                   ║
+║     - 本地图片：'photos/pic1.jpg'                                   ║
+║     - 网络图片：'https://example.com/image.jpg'                   ║
+║                                                                    ║
+║  3️⃣ 示例格式：                                                      ║
+║     ['photos/photo1.jpg', '照片标题', '照片描述']                    ║
+║                                                                    ║
+║  💡 优势：支持大量图片、自动懒加载、性能优化！                        ║
+╚══════════════════════════════════════════════════════════════════╝
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TWY's 相册库</title>
+    
+    <!-- ==================== 样式区域 (CSS) ==================== -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #003a96 100%);
+            min-height: 100vh;
+            padding-bottom: 50px;
+        }
+
+        /* 顶部导航栏 */
+        .navbar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px 40px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar h1 {
+            color: white;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        /* 返回按钮 */
+        .back-btn {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .back-btn:hover {
+            background-color: white;
+            color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 相册容器 */
+        .gallery-container {
+            max-width: 1400px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .gallery-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .gallery-header h2 {
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .gallery-header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        /* 相册网格布局 */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        /* 💡 这是单个照片项的样式 */
+        .photo-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .photo-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 照片容器 */
+        .photo-wrapper {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .photo-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .photo-item:hover .photo-wrapper img {
+            transform: scale(1.1);
+        }
+
+        /* 图片加载状态 */
+        .photo-wrapper img.loading {
+            opacity: 0.5;
+        }
+
+        .photo-wrapper img.loaded {
+            opacity: 1;
+        }
+
+        /* 加载提示 */
+        .loading-indicator {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        /* 占位符图标 */
+        .placeholder-icon {
+            font-size: 4rem;
+            color: #bbb;
+        }
+
+        /* 照片描述 */
+        .photo-info {
+            padding: 20px;
+        }
+
+        .photo-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .photo-description {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* 文档区域样式 */
+        .documents-section {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 2px solid rgba(102, 126, 234, 0.2);
+        }
+
+        .documents-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .documents-header h3 {
+            color: #333;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .documents-header p {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        .documents-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .document-item {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .document-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .document-icon {
+            font-size: 3rem;
+            flex-shrink: 0;
+        }
+
+        .document-info {
+            flex-grow: 1;
+        }
+
+        .document-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .document-item:hover .document-title,
+        .document-item:hover .document-description {
+            color: white;
+        }
+
+        .document-description {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 15px 20px;
+            }
+
+            .navbar h1 {
+                font-size: 1.3rem;
+            }
+
+            .photo-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 15px;
+            }
+
+            .gallery-header h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .photo-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .back-btn {
+                padding: 8px 20px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- 顶部导航栏 -->
+    <nav class="navbar">
+        <h1>📷 TWY's 相册库</h1>
+        <a href="index.html" class="back-btn">← 返回首页</a>
+    </nav>
+
+    <!-- 相册主容器 -->
+    <div class="gallery-container">
+        
+        <!-- 相册标题区域 -->
+        <div class="gallery-header">
+            <h2>我的照片集</h2>
+            <p>记录生活中的美好瞬间</p>
+        </div>
+
+        <!-- ==================== 相册网格区域 ==================== -->
+        <!-- 💡 照片会自动通过 JavaScript 生成，不需要手动添加 HTML -->
+        <div class="photo-grid">
+            <!-- 照片会在这里自动显示 -->
+        </div>
+
+        <!-- ==================== 文档区域 ==================== -->
+        <div class="documents-section">
+            <div class="documents-header">
+                <h3>📄 我的文档</h3>
+                <p>重要文件和资料</p>
+            </div>
+            <div class="documents-grid">
+                <!-- 文档会自动通过 JavaScript 生成 -->
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ==================== 功能代码区域 ==================== -->
+    <script>
+        // 💡 ============================================
+        // 💡 批量添加图片 - 在这里添加你的所有图片！
+        // 💡 ============================================
+        // 格式：[图片路径, 标题, 描述]
+        const photos = [
+            // files 目录中的图片
+            ['files/微信图片_20251107193544_346_3.jpg', '好乖', '我的宝贝'],
+            ['files/微信图片_20251107193545_347_3.jpg', '大坏蛋', '我的宝贝'],
+            ['files/微信图片_20251107193546_348_3.jpg', 'baby', '我的宝贝'],
+            ['files/微信图片_20251107193547_349_3.jpg', 'My lover', '我的宝贝'],
+            ['files/微信图片_20251107193548_350_3.jpg', '小狗', '我的宝贝'],
+            ['files/微信图片_20251107193549_351_3.jpg', '老婆', '我的宝贝'],
+            ['files/微信图片_20251107193550_352_3.jpg', 'Steve', '我的宝贝'],
+            ['files/微信图片_20251107193551_354_3.jpg', '爱人', '我的宝贝'],
+            ['files/微信图片_20251107193552_355_3.jpg', '🐕中之🐕', '狗'],
+            ['files/微信图片_20251107193553_356_3.jpg', '我和我的宝贝', '我的宝贝'],
+            ['files/微信图片_20251107193554_357_3.jpg', '我和我的宝贝', '我的宝贝'],
+            ['files/微信图片_20251107193555_358_3.jpg', '小baby狗', '我的宝贝'],
+            
+            // 💡 想添加更多图片？继续在这里添加！
+            // ['files/your-photo.jpg', '照片标题', '描述文字'],
+        ];
+
+        // 💡 ============================================
+        // 💡 批量添加文档 - 在这里添加你的PDF、Word等文档！
+        // 💡 ============================================
+        // 格式：[文件路径, 标题, 描述, 图标]
+        const documents = [
+            // 💡 生活空间的文档都在这里添加
+            // 💡 学习相关的文档（六级成绩单等）已移至"学习空间"页面
+            
+            // 💡 想添加更多文档？继续在这里添加！
+            // ['files/your-document.pdf', '文档标题', '描述文字', '📄'],
+        ];
+
+        // 自动生成相册
+        function generateGallery() {
+            const photoGrid = document.querySelector('.photo-grid');
+            
+            // 清空现有的占位照片
+            photoGrid.innerHTML = '';
+            
+            // 为每张图片创建卡片
+            photos.forEach((photo, index) => {
+                const [src, title, description] = photo;
+                
+                const photoItem = document.createElement('div');
+                photoItem.className = 'photo-item';
+                photoItem.innerHTML = `
+                    <div class="photo-wrapper">
+                        <img 
+                            src="${src}" 
+                            alt="${title}"
+                            loading="lazy"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+                        >
+                        <span class="placeholder-icon" style="display:none;">📸</span>
+                    </div>
+                    <div class="photo-info">
+                        <div class="photo-title">${title}</div>
+                        <div class="photo-description">${description}</div>
+                    </div>
+                `;
+                
+                // 添加点击事件
+                photoItem.addEventListener('click', function() {
+                    const img = this.querySelector('img');
+                    if (img && img.src) {
+                        window.open(img.src, '_blank');
+                    }
+                });
+                
+                photoGrid.appendChild(photoItem);
+            });
+            
+            // 显示图片数量
+            const count = photos.length;
+            const header = document.querySelector('.gallery-header p');
+            if (header) {
+                header.textContent = `记录生活中的美好瞬间 · 共 ${count} 张照片`;
+            }
+        }
+
+        // 自动生成文档列表
+        function generateDocuments() {
+            const documentsSection = document.querySelector('.documents-section');
+            const documentsGrid = document.querySelector('.documents-grid');
+            
+            if (!documentsGrid) return;
+            
+            // 如果没有文档，隐藏整个文档区域
+            if (documents.length === 0) {
+                if (documentsSection) {
+                    documentsSection.style.display = 'none';
+                }
+                return;
+            }
+            
+            // 清空现有内容
+            documentsGrid.innerHTML = '';
+            
+            // 为每个文档创建卡片
+            documents.forEach((doc) => {
+                const [src, title, description, icon] = doc;
+                
+                const docItem = document.createElement('div');
+                docItem.className = 'document-item';
+                docItem.innerHTML = `
+                    <div class="document-icon">${icon}</div>
+                    <div class="document-info">
+                        <div class="document-title">${title}</div>
+                        <div class="document-description">${description}</div>
+                    </div>
+                `;
+                
+                // 添加点击事件 - 在新标签页打开PDF
+                docItem.addEventListener('click', function() {
+                    window.open(src, '_blank');
+                });
+                
+                documentsGrid.appendChild(docItem);
+            });
+            
+            // 更新文档数量
+            const header = document.querySelector('.documents-header p');
+            if (header && documents.length > 0) {
+                header.textContent = `重要文件和资料 · 共 ${documents.length} 个文档`;
+            }
+        }
+
+        // 页面加载完成后生成相册和文档
+        document.addEventListener('DOMContentLoaded', function() {
+            generateGallery();
+            generateDocuments();
+        });
+    </script>
+
+</body>
+</html>
+

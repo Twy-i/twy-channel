@@ -1,0 +1,900 @@
+﻿<!DOCTYPE html>
+<html xmlns:o='urn:schemas-microsoft-com:office:office'
+      xmlns:w='urn:schemas-microsoft-com:office:word'
+      xmlns='http://www.w3.org/TR/REC-html40'>
+<head>
+    <meta http-equiv="Content-Type" content="application/msword; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>南华大学_堆用关键核素183W光中子反应的蒙特卡罗模拟与平坦探测效率谱仪结构优化_2025年08月27日21时53分29秒</title>
+    <!--[if gte mso 9]>
+    <xml>
+    <w:WordDocument>
+    <w:View>Print</w:View>
+    <w:Zoom>100</w:Zoom>
+    <w:DoNotOptimizeForBrowser/>
+    <w:DisplayBackgroundShape/>
+    </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style type="text/css">
+        body.c-word--body {
+            padding: 0;
+            margin: 0;
+            font-family: "Microsoft YaHei", SimHei, SimSun, "Times New Roman", Georgia, Serif;
+        }
+
+        .c-word--empty {
+            text-align: center;
+            font-size: 24px;
+            color: #ddd;
+            padding: 60px 20px;
+        }
+
+        .c-word--title {
+            padding: 9pt 1pt;
+            margin: 0;
+            text-align: center;
+        }
+
+        table.table {
+            width: 100%;
+            margin: 3pt auto;
+            border-collapse: collapse;
+            border-spacing: 1pt;
+        }
+
+        table.table-border {
+            border-collapse: collapse;
+        }
+
+            table.table-border tr th {
+                border: solid windowtext 1pt;
+                border-color: #000;
+                border-width: 1pt;
+            }
+
+            table.table-border tr td {
+                border: solid windowtext 1pt;
+                border-color: #000;
+                border-width: 1pt;
+            }
+
+        .text-center {
+            text-align: center;
+        }
+    </style>
+    
+    <link href="http://114.220.75.43:1021/hncxcy/assets/dist/css/Areas/Item/Declare/ExportWord.css" rel="stylesheet" />
+
+    
+    <style>
+    p.MsoFooter, li.MsoFooter, div.MsoFooter {
+        margin: 0in;
+        margin-bottom: 0.001pt;
+        mso-pagination: widow-orphan;
+        tab-stops: center 3.0in right 6.0in;
+        font-size: 12.0pt;
+        font-family: 等线, 宋体,华文细黑,'Microsoft YaHei',仿宋, 黑体;
+    }
+
+    <!-- /* Style Definitions */
+    @page Section1 {
+        size: 8.5in 11.0in;
+        margin: 1.0in 1.0in 1.0in 1.0in;
+        mso-header-margin: 0.5in;
+        mso-footer-margin: 0.5in;
+        mso-title-page: yes;
+        mso-header: page-info-container--header;
+        mso-even-header: page-info-container--header-;
+        mso-footer: page-info-container--footer;
+        mso-first-header: page-info-container--header-;
+        mso-first-footer: page-info-container--footer;
+        mso-paper-source: 0;
+    }
+
+    div.Section1 {
+        page: Section1;
+    }
+
+    table#page-info-container {
+        margin: 0in 0in 0in 900in;
+        width: 0px;
+        height: 0px;
+        overflow: hidden;
+    }
+    -->
+</style>
+
+</head>
+<body class="c-word--body">
+    <div>
+        
+
+
+        <div class="Section1">
+            <div class="single-page">
+                <div class="word-title1">
+                    <div>大学生创新训练项目计划申请书</div>
+                </div>
+                <div class="word-userinfo-container" style="text-align:center;">
+                    <table class="word-userinfo">
+                        <tbody>
+                            <tr>
+                                <td style="width:22%;" class="c-cell-title">项目编号</td>
+                                <td colspan="7" class="c-cell-value">
+                                    202510555045
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width:22%;" class="c-cell-title">项目名称</td>
+                                <td colspan="7" class="c-cell-value">
+                                    堆用关键核素183W光中子反应的蒙特卡罗模拟与平坦探测效率谱仪结构优化
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width:22%;" class="c-cell-title">项目负责人</td>
+                                <td colspan="3" class="c-cell-value">
+                                    谭文玉
+                                </td>
+                                <td style="width:20%;" class="c-cell-title">联系电话</td>
+                                <td colspan="3" class="c-cell-value">
+                                    15983753014
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width:22%;" class="c-cell-title">所在学院</td>
+                                <td colspan="7" class="c-cell-value">
+                                    核科学技术学院
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width:22%;" class="c-cell-title">学号</td>
+                                <td colspan="3" class="c-cell-value">
+                                    20220181323
+                                </td>
+                                <td style="width:20%;" class="c-cell-title">专业班级</td>
+                                <td colspan="3" class="c-cell-value">
+                                    核工2205班
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width:22%;" class="c-cell-title">指导教师</td>
+                                <td colspan="7" class="c-cell-value">
+                                    李鑫祥(lixinxiang@usc.edu.cn)
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="width:22%;" class="c-cell-title">申请日期</td>
+                                <td colspan="7" class="c-cell-value">
+                                    2025年6月12日
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width:22%;" class="c-cell-title">起止年月</td>
+                                <td colspan="7" class="c-cell-value">
+                                            <span> 2025年6月至2026年5月</span>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div style="margin:80pt 0 6pt;font-family:黑体,华文细黑;font-size:15.0pt;text-align:center;">
+                    南华大学
+                </div>
+            </div>
+            <br clear="all" style="page-break-before:always;" />
+            <div class="single-page">
+                <div class="word-abstract">
+                    <div class="word-abstract-title" style="margin-top:32pt;margin-bottom:32pt;font-weight:600;text-align:center;font-size:18.0pt;font-family:宋体;">
+                        填写说明
+                    </div>
+                    <div class="word-abstract-content" style="margin-top:32pt;">
+                        <ol style="font-family:仿宋,宋体;font-size:15pt;line-height:32pt;">
+                            <li>本申请书所列各项内容均须实事求是，认真填写，表达明确严谨，简明扼要。</li>
+                            <li>申请人可以是个人，也可为创新团队，首页只填负责人。“项目编号”一栏不填。</li>
+                            <li>本申请书为大16开本（A4），左侧装订成册。可网上下载、自行复印或加页，但格式、内容、大小均须与原件一致。</li>
+                            <li>负责人所在学院认真审核, 经初评和答辩，签署意见后，将申请书（一式两份）报送南华大学项目管理办公室。</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <br clear="all" style="page-break-before:always;" />
+            <div class="single-page">
+                <!--  一、	基本情况 开始-->
+                <div class="c-base-info">
+                    <h4 class="c-base-info-title">
+                        一、	基本情况
+                    </h4>
+                    <div class="c-base-info-content">
+                        <table class="c-base-info-table">
+                            <tbody>
+                                <tr>
+                                    <td style="width:8%;" class="c-cell-title">项目名称</td>
+                                    <td colspan="9" class="c-cell-value">
+                                        堆用关键核素183W光中子反应的蒙特卡罗模拟与平坦探测效率谱仪结构优化
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width:8%;" class="c-cell-title">项目级别</td>
+                                    <td colspan="9" class="c-cell-value">
+                                        国家级
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width:8%;" class="c-cell-title">项目类型</td>
+                                    <td colspan="9" class="c-cell-value">
+                                        创新训练项目
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width:8%;" class="c-cell-title">所属学科</td>
+                                    <td colspan="9" class="c-cell-value">
+                                        <div class="c-cell-content">
+                                            <span>
+                                                <span class="c-title">学科一级门：</span>
+                                                <span class="c-value">工学</span>
+                                            </span>
+                                            <span>&nbsp;</span>
+                                            <span>
+                                                <span class="c-title">学科二级类：</span>
+                                                <span class="c-value">核工程类</span>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width:8%;" class="c-cell-title">申请金额</td>
+                                    <td class="c-cell-value" colspan="2" style="width:16%;">
+                                                <span>10000.00</span>
+
+                                        <span> 元</span>
+                                    </td>
+                                    <td class="c-cell-title" colspan="2" style="width:16%;">起止年月</td>
+                                    <td class="c-cell-value" colspan="5" style="width:60%;">
+                                                <span>2025年6月至2026年5月</span>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width:8%;" class="c-cell-title">负责人</td>
+                                    <td class="c-cell-value" colspan="1" style="width:10%;">
+                                        谭文玉
+                                    </td>
+                                    <td style="width:8%;" class="c-cell-title">性别</td>
+                                    <td class="c-cell-value" colspan="1" style="width:8%;">
+                                        男
+                                    </td>
+                                    <td style="width:8%;" class="c-cell-title">民族</td>
+                                    <td class="c-cell-value" colspan="2">
+                                        
+                                    </td>
+                                    <td style="width:8%;" class="c-cell-title">出生年月</td>
+                                    <td class="c-cell-value" colspan="2" style="text-align:center;">
+                                                <span>2004年09月</span>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width:8%;" class="c-cell-title">学号</td>
+                                    <td colspan="1" class="c-cell-value" style="width:20%;">
+                                        20220181323
+                                    </td>
+                                    <td style="width:5%;" class="c-cell-title">联系电话</td>
+                                    <td colspan="7" class="c-cell-value" style="width:65%;">
+                                        <div class="c-cell-content">
+                                            <span>
+                                                <span class="c-title">宅：</span>
+                                                <span class="c-value">15983753014</span>
+                                            </span>
+                                            <span>
+                                                <span class="c-title">手机：</span>
+                                                <span class="c-value">15983753014</span>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                            <tr>
+                                                <td style="width:8%;" class="c-cell-title">指导教师</td>
+                                                <td colspan="1" class="c-cell-value" style="width:20%;">
+                                                    李鑫祥
+                                                </td>
+                                                <td style="width:5%;" class="c-cell-title">联系电话</td>
+                                                <td colspan="7" class="c-cell-value" style="width:65%;">
+                                                    <div class="c-cell-content">
+                                                        <span>
+                                                            <span class="c-title">宅：</span>
+                                                            <span class="c-value">19310460772</span>
+                                                        </span>
+                                                        <span>
+                                                            <span class="c-title">手机：</span>
+                                                            <span class="c-value">19310460772</span>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                <tr>
+                                    <td style="width:16%;text-align:left;" class="c-cell-title" colspan="2">项目简介</td>
+                                    <td class="c-cell-value" colspan="8" style="width:84%;">
+                                        <div class="c-cell-content">
+                                            在核反应堆运行时由于链式裂变的结果，从放射性裂变产物的衰变中和各种中子相互作用中，特别是从中子辐射俘获和非弹性散射中，在堆内部产生了大量的高能 γ 射线。这些高能伽马射线与燃料元件和控制棒材料W发生光中子反应，影响反应堆的寿命和安全性。因此，W同位素的光中子反应截面数据是反应堆设计和安全控制的关键核参数。上海激光电子伽马源（SLEGS）装置是开展光中子反应实验测量的重要平台，目前，光核反应产生的光中子在平坦效率谱仪探测材料中的输运过程不明朗，以及 SLEGS配备的平坦探测效率谱仪（FED）的探测效率随能量的变化曲线在高能区不够准确，这给利用SLEGS开展光中子反应实验获得高精度W同位素光中子截面数据带来了挑战。
+本项目将利用理论计算和蒙卡模拟相结合的方法，阐明光核反应产生的光中子在平坦效率谱仪探测材料中的输运过程，并基于此对SLEGS装置配备的FED探测器的几何结构进行优化，使FED的探测效率随能量变化的曲线在高能区也能保持平坦。本项目将对利用SLEGS装置开展光中子反应实验提供必要的理论和模拟指导，为后续获得精确的W同位素光中子反应截面实验数据奠定基础
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width:16%;text-align:left;" class="c-cell-title" colspan="2">负责人曾经参与科研的情况</td>
+                                    <td class="c-cell-value" colspan="8" style="width:84%;">
+                                        <div class="c-cell-content">
+                                            <p>1：基于Geant4的编码孔成像模拟完成模拟单能伽马射线经过钨材料后在探头内的能量沉积谱。</p><p>2：基于livemore 实验装置的光中子模拟分析。</p><p>3：为论文：“Radiation effect of polycarbonate films after electron beam irradiation ”提供模拟支持。</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width:16%;text-align:left;" class="c-cell-title" colspan="2">指导教师承担科研课题情况</td>
+                                    <td class="c-cell-value" colspan="8" style="width:84%;">
+                                        <div class="c-cell-content">
+                                            1.国家自然科学基金委员会, 联合基金项目, U2441221, 堆用关键核素光中子反应截面精确测量方法及数据评价研究, 2025-01-01 至 2028-12-31, 259万元, 在研, 参与；（本人承担70万元项目经费，作为研究骨干负责南华大学研究任务执行）
+<div>2.湖南省自然科学基金委员会，青年科学基金C，2025JJ60020,天体核过程中Yb中子俘获截面实验研究，2025-01-01至2027-12-31，5万元，在研，主持；
+</div><div>3.南华大学博士科研启动项目，230XQD007，Yb中子俘获截面实验数据分析，2023-2026，10万元，在研，主持；
+</div><div>Nd、Sn同位素链的光中子截面数据评估，中国原子能科学研究院委托项目，2023-2025，9.9万元，在研，主持；</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width:16%;text-align:left;" class="c-cell-title" colspan="2">指导教师对本项目的支持情况</td>
+                                    <td class="c-cell-value" colspan="8" style="width:84%;">
+                                        <div class="c-cell-content">
+                                            在“堆用关键核素183W光中子反应的蒙特卡罗模拟与平坦探测效率谱仪结构优化”项目中，指导教师李鑫祥老师凭借其深厚的专业知识、丰富的科研经验以及对学生的悉心指导，为项目的顺利开展提供了全方位的支持，具体体现在以下几个方面：<div>一、科研方向与技术路线的精准把控</div><div>李老师在项目选题阶段，结合国际光核数据匮乏的现状及反应堆安全控制的关键需求，指导团队确定了以183W光中子反应模拟与探测器优化为核心的研究方向。他带领学生梳理技术路线，明确分阶段目标：</div><div>&nbsp;前期理论模拟：指导学生运用Talys程序开展183W光中子反应截面计算，通过参数调试与模型验证，确保中子能谱数据的准确性，为Geant4模拟提供可靠输入源项。</div><div>&nbsp;实验模拟优化：针对平坦效率谱仪（FED）几何结构优化的关键问题，李老师引导团队利用Geant4程序构建探测器三维模型，从聚乙烯慢化体厚度、氦-3探测器布局到镉屏蔽层设计，逐项分析参数对探测效率的影响，形成系统性的模拟方案。</div><div><br></div><div>二、科研工具与方法的悉心指导</div><div><br></div><div>李老师注重培养学生的科研实操能力，针对项目涉及的核心软件与算法，开展了系统性教学：</div><div>&nbsp;软件工具：指导学生掌握Talys程序的核反应模拟流程，包括输入文件配置、反应通道筛选及截面数据解读，使学生能够独立完成183W(γ,1n/2n/3n)反应的能谱计算。 带领团队学习Geant4程序的几何建模与粒子输运模拟，从世界体积设定、材料属性定义到探测器响应分析，逐步拆解复杂流程，确保学生熟练运用蒙特卡罗算法模拟中子输运过程。</div><div>数据分析：引导学生使用Matlab/Python处理模拟数据，结合ROOT工具进行可视化分析，提升数据处理与结果阐释能力。</div><div><br></div><div>三、科研资源与实地学习的积极支持</div><div>李老师依托自身科研合作网络与项目资源，为团队争取到宝贵的实地学习机会：积极协调联系上海光源（SSRF）的激光电子伽马源（SLEGS）光束线站，安排团队成员前往本部进行短期学习。             四、研究进程与成果的严格督导 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</div><div>李老师建立了常态化的项目沟通机制，确保研究按计划推进：</div><div>定期研讨：每周组织组会，听取学生汇报模拟进展，针对技术难点（如FED效率平坦化优化、中子多重数排序法应用）进行深入讨论，及时调整研究方案。</div><div>成果把关：在数据处理、论文撰写等关键环节，对学生成果进行细致审阅，从图表规范到结论推导逐一指导。目前团队已完成Talys基础模拟与Geant4几何建模，相关阶段性成果为后续实验验证奠定了坚实基础。</div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td style="width:5%;" class="c-cell-title" rowspan="6">项目组主要成员</td>
+                                    <td class="c-cell-title" style="width:5%;">姓名</td>
+                                    <td class="c-cell-title" style="width:15%;">学号</td>
+                                    <td class="c-cell-title" style="width:16%;">专业班级</td>
+                                    <td class="c-cell-title" style="width:16%;">所在学院</td>
+                                    <td class="c-cell-title" colspan="5" style="width:43%;">项目中的分工</td>
+                                </tr>
+                                        <tr class="c-liststudent-tr">
+                                            <td class="c-cell-value">
+                                                谭文玉
+                                            </td>
+                                            <td class="c-cell-value">
+                                                20220181323
+                                            </td>
+                                            <td class="c-cell-value">
+                                                核工2205班
+                                            </td>
+                                            <td class="c-cell-value">
+                                                核科学技术学院
+                                            </td>
+                                            <td class="c-cell-value" colspan="5">
+                                                负责Talys截面计算、Geant4模拟以及后续数据处理工作
+                                            </td>
+                                        </tr>
+                                        <tr class="c-liststudent-tr">
+                                            <td class="c-cell-value">
+                                                邱锟
+                                            </td>
+                                            <td class="c-cell-value">
+                                                20204670118
+                                            </td>
+                                            <td class="c-cell-value">
+                                                核工2205班
+                                            </td>
+                                            <td class="c-cell-value">
+                                                核科学技术学院
+                                            </td>
+                                            <td class="c-cell-value" colspan="5">
+                                                负责研究现状与发展动态工 作
+                                            </td>
+                                        </tr>
+                                        <tr class="c-liststudent-tr">
+                                            <td class="c-cell-value">
+                                                吴嘉钧
+                                            </td>
+                                            <td class="c-cell-value">
+                                                20210650725
+                                            </td>
+                                            <td class="c-cell-value">
+                                                核工2301班
+                                            </td>
+                                            <td class="c-cell-value">
+                                                核科学技术学院
+                                            </td>
+                                            <td class="c-cell-value" colspan="5">
+                                                负责研究目的与研究内容工作
+                                            </td>
+                                        </tr>
+                                        <tr class="c-liststudent-tr">
+                                            <td class="c-cell-value">
+                                                曹雨轩
+                                            </td>
+                                            <td class="c-cell-value">
+                                                20230181218
+                                            </td>
+                                            <td class="c-cell-value">
+                                                核工2302班
+                                            </td>
+                                            <td class="c-cell-value">
+                                                核科学技术学院
+                                            </td>
+                                            <td class="c-cell-value" colspan="5">
+                                                负责线路图和研究方案工作
+                                            </td>
+                                        </tr>
+                                        <tr class="c-liststudent-tr">
+                                            <td class="c-cell-value">
+                                                李玥瑶
+                                            </td>
+                                            <td class="c-cell-value">
+                                                20240180503
+                                            </td>
+                                            <td class="c-cell-value">
+                                                核工2402班
+                                            </td>
+                                            <td class="c-cell-value">
+                                                核科学技术学院
+                                            </td>
+                                            <td class="c-cell-value" colspan="5">
+                                                前期数据的收集及处理及相关文献的查阅
+                                            </td>
+                                        </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--  一、	基本情况 结束-->
+                <!--  二、	立项依据（可加页） 开始-->
+                <div class="c-base-info">
+                    <h4 class="c-base-info-title">
+                        二、	立项依据（可加页）
+                    </h4>
+                    <div class="c-base-info-content">
+                        <table class="c-lxyj-table">
+                            <tr>
+                                <td>
+                                                                        <div class="c-lxyj">
+                                                                            <h4 class="c-lxyj-title">
+                                                                                （一）研究目的
+                                                                            </h4>
+                                                                            <div class="c-lxyj-content">
+                                                                                获得最优的平坦探测效率谱仪(FED)的几何结构。
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="c-lxyj">
+                                                                            <h4 class="c-lxyj-title">
+                                                                                （二）研究内容
+                                                                            </h4>
+                                                                            <div class="c-lxyj-content">
+                                                                                <p>一，183W(γ, xn)反应的出射中子能谱模拟利用Talys软件，对单能伽马入射情况下的183W(γ, n)、183W(γ, 2n)、183W(γ, 3n)等反应进行模拟计算，获得反应产生的中子能谱信息。</p><p>二，<span style="font-family:" microsoft="" yahei",="" simhei,="" simsun,="" "times="" new="" roman",="" georgia,="" serif;"="">光中子在探测材料中的输运过程模拟利用基于蒙特卡罗算法的Geant4程序，以研究内容(1)输出的中子能谱信息作为输入源项，模拟183W(γ, xn)反应产生的中子在探测器材料中的慢化和输运过程，获得光中子在探测材料中的能量、动量、位置等信息的变化。</span></p><p><span style="font-family:" microsoft="" yahei",="" simhei,="" simsun,="" "times="" new="" roman",="" georgia,="" serif;"="">三，</span><span style="font-family:" microsoft="" yahei",="" simhei,="" simsun,="" "times="" new="" roman",="" georgia,="" serif;"="">平坦探测效率谱仪几何结构优化利用蒙特卡罗算法的Geant4程序对上海激光电子伽马源(SLEGS)配备的平坦效率探测器(FED)谱仪开展模拟，以FED总效率在全能区平坦为目标进行优化，寻找最佳的FED的几何结构。</span></p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="c-lxyj">
+                                                                            <h4 class="c-lxyj-title">
+                                                                                （三）国、内外研究现状和发展动态
+                                                                            </h4>
+                                                                            <div class="c-lxyj-content">
+                                                                                <p>国内外研究现状和发展动态</p><p>1.研究现状</p><p>(1) W同位素的(γ, xn)反应截面数据精确性对先进反应堆安全控制与运行的关键意义先进反应堆的稳定运行和安全控制是核心指标，在设计时需要高精度核数据的支撑；W在反应堆中结构材料或包壳材料等中大量应用，在核反应堆运行时，反应堆内存在大量的中子和光子（即γ射线），由于链式裂变的结果，从放射性裂变产物的衰变中和各种中子相互作用中，特别是从中子辐射俘获和非弹性散射中，在堆内部产生了大量的高能 γ 射线。而这些能量较高的γ射线可以跟反应堆的燃料棒、控制棒、反射层等材料发生光中子反应产生中子。即使在停堆以后，由于裂变产物的继续衰变和(γ, xn)反应仍能继续产生缓发中子和缓发光子。中子和光子与堆内材料和关键部件原子核的相互作用决定了反应堆的寿命和安全性，因此W的中子与光子核数据的精确性就异常关键。光中子在反应堆中属于缓发中子，有时可占 缓发中子的 50%之多。虽然缓发中子的总量在堆内所有中子数中一般只占很少比例，但对反应堆动力学的影响非常重要。由于缓发中子和缓发光子的缓发时间相对较长，可长达几十秒，比堆内热中子平均寿命 10-4 s 大了许多，从而增大了反应堆周期，使得两代中子之间的平均时间间隔增加，延迟了中子密度变化率，进而使得反应堆的安全控制成为了可能，影响堆内中子平衡及运输过程。</p><p>(2) 国际上光核反应数据严重不足，当前EXFOR实验数据库中并未收录183W(γ, xn)反应截面实验数据。目前光核反应数据还存在较大缺陷和不足，从国际上主要的光核数据库来看（如图1. 国际上主要核数据库中的各类核数据收集情况[10]所示），日本和美国处于领先阶段，分别于2016和2018年发布了新版数据库（JENDL/PD-2016和ENDF/BVIII，包含光核数据）；此后国际原子能机构（IAEA）2019年发布了新版的光核数据库，相较于1999年版本，光核数据从164个提高到219个核素，20年时间仅增加了55个新测量数据；法国的JEFF-3.3数据库发布于2017年，其中的光核数据取自TENDL-2017（Talys模型计算数据）；中国新版核数据库CENDL-3.2发布于2020年，并未包含光核数据库；俄罗斯ROSFOND-3.1数据库发布于2016年，没有包含光核数据，近年来也未更新。图1. 国际上主要核数据库中的各类核数据收集情况[10]如图2所示，当前EXFOR实验数据库中W的同位素仅只有0W、186W与184W的部分光中子反应截面实验数据，并未收录183W(γ, xn)反应截面实验数据。</p><p><span style="font-family:" microsoft="" yahei",="" simhei,="" simsun,="" "times="" new="" roman",="" georgia,="" serif;"="">2.发展动态</span></p><p><span style="font-family:" microsoft="" yahei",="" simhei,="" simsun,="" "times="" new="" roman",="" georgia,="" serif;"="">(1) 依托 SLEGS 装置，我国已具备 183W 光中子反应截面实验数据测能力从光核数据的测量装置来看，有四种可用的宽能区伽马源。一是利用加速器 进行（p,γ）共振核反应产生单能伽马；第二是韧致辐射伽马，利用高能电子与高 Z 靶产生的连续伽马谱；第三是正电子飞行中湮灭装置；第四种方式是利用逆康普顿散射方式得到的激光电子伽马源（LCS），该方式得到的伽马源具有能量准单能、连续可调、强度高等优点，是测量光核反应数据的理想之选。上个世纪八十年代以来，国际上该类装置仅美国和日本等发达国家有少数几台，如 HIγs，BL01@NewSUBARU 等，欧洲在 2017 年提出建设ELI-NP 装置，其中伽马源分支（后期更名为 VEGA）至今还未能建成。我国依托世界上性能最先进的第三代同步辐射装置（上海光源 SSRF）于 2021 年底建成激光康普顿散射伽马源束线站（SLEGS，0.25-21.7MeV），也具备了光核反应数据的测量能力[7]。SLEGS 装置具有最好的能量扫描精度、流强密度和快速能量调节能力。SLEGS线站还可以产生能量范围在0.25-21.7MeV之间的伽马射线，强度可达104-107/s成为了我国开展光核反应实验研究的有力工具。</span></p><p>（2）光中子截面测量的方法国内外都已取得较好进展光中子截面测量主要有环比法（Ring-Ratio Method - RRM[8]）、中子多重数排序法（Direct Neutron-multiplicity Sorting Method - DNSM[9]、中子飞行时间方法（Neutron Time of Flight - NTOF）和伽马活化分析法测量（Gamma Activation Analyses - GAA）等多种实验方法。目前比较成熟的实验方法是环比法，利用正比计数器和慢化体测量中子计数和平均能量的办法是环比法的主要思想，这种方法对于测量 1n 出射道的截面测量比较有效，目前测量精度可以达到5%以下；对于中子 2n 阈值以上开放的反应道，采用中子多重数排序法来区分不同来源的中子；中子飞行时间法测量的是中子飞行一定距离的时间，飞行距离越长飞行时间测量越精确，但是探测器的立体角迅速降低，因此需要的较高的事件反应率和较多数量的中子探测器，该方法目前还不成熟，仍需要深入的研究和探索。在 ELI-NP 及 SLEGS 均建有中子飞行时间探测器谱仪，由于中子飞行时间需要大尺寸中子探测器以及中子起始时间信息，这在 SLEGS 连续型 LCS 装置上实现还是有一定的技术难度，目前这一方法还在测试检验中；伽马活化分析法作为一个比较成熟的实验技术，已经被广泛的应用在各种粒子束实验中，如重离子活化、质子活化、中子活化等，由于是利用活化后母核或者子核退激发射的特征伽马射线，因此退激伽马射线低本底测量是关键因素，此外由于 LCS 伽马源的准单能性质，使得伽马源能量分辨带入的误差也相对较大，测量精度也可以达到5%以下。 中国原子能科学研究院基于串列加速器产生的（p,γ）共振伽马源，已经掌握了伽马活化分析法，并用于197Au 光核反应截面测量。中国科学院上海高等研究院目前已经对环比法开展了初步研究[11]，取得了较好的进展。环比法和中子多重数排序法都基于中子平坦效率探测器，它们可以测量得到光中子的平均能量和反应截面。新建 LCS 伽马源线站都研制了相应的平坦效率型探测装置，使用这两种方法可以进行光中子核数据的测量。中子飞行时间法虽然目前还不成熟，由于它可以得到准确的中子能量和角分布，因此提高伽马源流强，增加探测器数量发展中子飞行时间法是未来的研究趋势。</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="c-lxyj">
+                                                                            <h4 class="c-lxyj-title">
+                                                                                （四）创新点与项目特色
+                                                                            </h4>
+                                                                            <div class="c-lxyj-content">
+                                                                                <p>项目的创新点和特色</p><p>1.创新点</p><p>软硬件结合提高利用 FED 开展光中子截面测量的精度目前 FED 探测效率随能量的变化曲线在高能区不够准确，这将给利用中子多重数排序法测量(γ,xn)反应截面带来较大不确定度，本项目利用Geant4优化 FED 布局方案，结合Talys和Geant4开展目标核素(γ,xn)反应出射中子在 FED探测器中输运过程的精确模拟，从硬件和软件两方面着手解决这一问题，提高利用 FED 开展光中子截面测量的精度，是本项目的创新之处。</p><p>2.特色</p><p><span style="font-family:" microsoft="" yahei",="" simhei,="" simsun,="" "times="" new="" roman",="" georgia,="" serif;"="">（1）SLEGS本项目利用上海光源（SSRF）建成的激光电子伽马源（SLEGS）光束线站的伽马源强度与能量信息输入进Geant4程序中进行抽样，模拟LCS光源打靶过程;对183W同位素开展模拟;提取并输出探测材料几何体中的粒子能量、位置、动量等信息。国际上，光核反应实验研究在较长时间内由于伽马源数量少而进展缓慢，国内也基本处于停滞状态。上世纪80年代以后，随着同步辐射光源和自由电子激（FEL）装置的发展，日本和美国先后建立了多台逆康普顿散射伽马源，使得光核物理实验工作进入了新时期。目前国际上运行的激光康普顿散射(LCS)伽马源装置有日本的BL1U@UVSORIII、LPES/LEPS2@SPring8和美国的HIγS装置。欧洲极端光物理设施-核物理装置(ELI-NP)经过重新设计变更为可变能量伽马源（VEGA），其建成运行预计到2026年。国内2021年12月依托上海光源（SSRF）建成了激光电子伽马源（SLEGS）光束线站。SLEGS线站可以产生能量范围在0.25-21.7MeV之间的伽马射线，强度可达104-107/s，成为了我国开展光核反应实验研究的有力工具，利用SLEGS线的伽马源强度与能量信息输入进Geant4程序中展开模拟对粒子的信息进行收集。</span></p><p><span style="font-family:" microsoft="" yahei",="" simhei,="" simsun,="" "times="" new="" roman",="" georgia,="" serif;"="">（2）为利用上海激光电子伽马源（SLEGS）装置开展183W(γ,xn)实验提供模拟数据支撑在核物理研究领域，精确模拟核反应过程与粒子输运对理解物理机制、优化实验设计具有重要意义。本项目运用 Talys 程序模拟光子（γ）与钨 - 183（183W）靶核的光中子反应过程，提供中子源特性基础数据，为后续基于上海激光电子伽马源（SLEGS）装置开展提供有力支撑。</span></p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="c-lxyj">
+                                                                            <h4 class="c-lxyj-title">
+                                                                                （五）技术路线、拟解决的问题及预期成果
+                                                                            </h4>
+                                                                            <div class="c-lxyj-content">
+                                                                                <p>1.技术路线 </p><p>本项目围绕利用蒙特卡洛程序开展光中子在探测器及堆材料中的输运机理展开，具体技术路线如下图所示：</p><p><img data-summernote-img="upload" alt="summernote-img" data-path="FileResources/PersonalFile/2025-06-12/a3d879bf697341bf865c2113a8f1ca2b.png" src="http://114.220.75.43:1021/hncxcy/FileResources/PersonalFile/2025-06-12/a3d879bf697341bf865c2113a8f1ca2b.png" width="294.8" height="426.01"></p><p>本项目研究的技术路线下面结合研究内容和技术路线来说明具体的研究方案和可行性。</p><p>2.研究方案</p><p>(1) 183W(γ, xn)反应的出射中子能谱模拟Talys 软件具有核反应模拟功能，能够完成目标核素在不同能量单能伽马射线入射情况下的光中子反应的出射中子能谱模拟，利用Talys软件，对单能伽马入射情况下的183W(γ, n)、183W(γ, 2n)等反应进行模拟计算，获得反应产生的中子能谱信息。选择光子（γ射线）作为入射粒子，采用183W 同位素，其原子量为 182.9513 g/mole，密度达 19.3 g/cm3的靶核。设定光子能量范围从 0.24–21.7 MeV，能量间隔为 100 keV，使用脚本文件：run.sh 运行，内容为： talys &lt; talys.inp &gt; talys.out输出控制启用总截面和分截面输出功能，关注单中子、双中子、三中子发射通道等，生成主输出文件。将研究重点精准聚焦于中子发射反应通道的截面数据，避免无关数据干扰。绘制了各个反应道的入射 γ 能量与（γ, xn）的反应截面折线图。</p><p>(2) 光中子在探测材料中的输运过程模拟利用基于蒙特卡罗算法的Geant4程序，可以完成项目中出射中子在探测器中的传输过程模拟，将 Talys 模拟的183W(γ, xn)出射中子信息作为源项，模拟183W(γ, xn）反应产生的中子在探测器材料中的慢化和输运过程，提取并输出探测材料几何体中的粒子能量、位置、动量等信息；根据 Geant4 输出的信息，使用数据分析工具如 ROOT 开展数据分析与可视化工作，得到光中子在探测材料中的能量、位置及动量分布信息。获得光中子在探测材料中的能量、动量、位置等信息的变化。准确理解光中子在探测材料中的输运机理。</p><p>(3) 平坦探测效率谱仪几何结构优化通常使用环比法测量(γ,1n)反应出射中子的能量，利用多重中子排序法计算(γ, xn)，(x=2,3...)以上的反应截面。然而中子探测器的探测效率随中子能量变化关系的完整曲线在实验上是难以完整获得的，这直接影响通过多重中子排序法计算的(γ, xn)反应截面。因此，有必要利用蒙特卡罗方法对SLEGS配备的平坦效率探测器(FED)谱仪开展相关模拟，获得探测效率随中子能量的变化关系的完整曲线，寻找最优的平坦探测效率谱仪几何结构。</p><p>(a) 环比方法（Ring-ratio Method）采用中子平坦效率探测器（谱仪），其探测器效率稳定在一定范围内，实验中应确定中子平均能量以确定该实验平均探测 器效率。环比指的平坦效率探测器外环与内环的计数之比，这个比值与入射中子的平均能量相关，由此可以确定平均探测器效率。</p><p>(b) 中子多重数排序法（Direct Neutron-multiplicity Sorting Method）用于实验上确定光中子多重事件数。根据截面定义，在某反应中部分光中子截面为 ，入射伽马的个数为，单位面积靶核数为，反应事件数表示为： &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </p><p>&nbsp; &nbsp; &nbsp;(1)实验上可以直接测量反应产生的中子数，当伽马能量小于2n中子发射阈值时，反应事件数；当的多中子反应发生时，需要根据测得的中子数利用中子多重数排序法计算。 假设在某一反应中只有4n以下的发应道开放，即γ能量大于3n阈值并且小于4n阈值，因此在一次反应中，最多释放三个中子。当这三个中子同时被记录到，记该事件为3n符合事件。同理，有2n符合事件和单中子事件，统一记为。中子探测器效率为入射中子能量的函数。表示为: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </p><p>&nbsp; (2)这里以单中子事件为例展开， &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </p><p>(3)(c) 利用蒙特卡罗算法的Geant4程序对上海激光电子伽马源(SLEGS)配备的平坦效率探测器(FED)谱仪开展模拟，分别获得FED中不同环对不同单能伽马射线情况下对183W(γ, xn)的探测效率、、，利用环比法确定出射中子平均能量，调整Geant4中FED的几何结构，以FED总效率,在全能区平坦为目标进行优化，寻找使得ε最平坦的FED的几何结构。</p><p>3.预期成果</p><p>(1) 获得最优平坦探测效率谱仪（FED）几何结构 通过 Geant4 模拟优化上海激光电子伽马源（SLEGS）配备的 FED 谱仪结构，确定探测器几何参数（如聚乙烯慢化体厚度、氦 - 3 探测器阵列布局、镉屏蔽层设计等），使 FED 探测效率在 0.25-21.7 MeV 全能区的平坦度提升≥20%，为中子多重数排序法测量光中子截面提供高精度实验装置方案；</p><p>(2) 利用Talys和Geant4完成FED装置支持的γ能量范围（0.24-21.7 MeV）下183W(γ,xn)发生光核反应产生的中子能谱模拟，输出不同入射伽马能量下的中子产额、能量分布及输运过程数据（如慢化时间、空间分布），形成包含至少3个主要反应道（γ,1n、γ,2n、γ,3n）的模拟数据集，为 SLEGS 装置开展 183W光中子反应截面实验提供模拟支撑；</p><p>(3) 参加本领域学术会议，并开展口头报告1-2次；<br></p><p><br></p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="c-lxyj">
+                                                                            <h4 class="c-lxyj-title">
+                                                                                （六）项目研究进度安排
+                                                                            </h4>
+                                                                            <div class="c-lxyj-content">
+                                                                                <p>(1) 2025年1月-2025年12月：完成文献调研、进行相关软件学习（Talys、Geant4、Python、Matlab等），为模拟实验的开展与数据处理打下良好基础。在此基础上，完成基于Talys的183W的三个反应道（183W(γ,1n)182W、183W(γ,2n)181W、183W(γ,3n)180W）截面数据的计算，得到了各个γ能量点下中子能谱分布数据与中子截面数据。此外，也完成了基于Geant4的平坦效率谱仪（FED）的几何构建工作，为后续关键提供了关键支撑；</p><p>（2）2026年1月-2026年12月：完成基于Geant4模拟的FED总效率在全能区平坦优化工作，寻找最佳的FED的几何结构，并且产生相关数据，与初始几何数据进行对比，定量分析优化的适用性与优越性。然后，利用优化参数的FED几何结构，通过Geant4程序对183W进行光核反应模拟，完成183W光核反应不同反应道的截面计算，并与Talys理论模型计算结果进行对比分析，为SLEGS装置开展 183W光中子反应截面实验提供良好模拟支撑；参加相关学术会议，开展相关交流讨论；撰写结题和总结报告，准备项目验收。</p>
+                                                                            </div>
+                                                                        </div>
+                                                        <div class="c-lxyj">
+                                                            <h4 class="c-lxyj-title">
+                                                                （七）已有基础
+                                                            </h4>
+                                                            <div class="c-lxyj-content">
+                                                                        <div class="c-lxyj-sub">
+                                                                            <div class="c-lxyj-sub-title">1.与本项目有关的研究积累和已取得的成绩</div>
+                                                                            <div class="c-lxyj-sub-contet">
+                                                                                本项目学生有关的研究积累和已取得的成绩1.有关研究积累(1)Talys计算项目团队，通过Talys程序用于模拟光子（γ）与钨 - 183（183W）靶核反应产生中子的过程。通过配置talys.inp文件，设定入射粒子为光子、靶核为183W，能量范围为0.24 - 21.7MeV（间隔100keV）等参数。计算得到183W光中子反应的三个主要通道（183W(γ,1n)182W、183W(γ,2n)181W、183W(γ,3n)180W）的截面数据。Talys 计算得到的截面数据直观反映了不同入射光子能量下各反应通道的贡献情况。如图 5所示，低能光子通常以单中子发射为主，而随着光子能量升高，高能光子可能引发多中子发射现象。图5. 183W Photoneutron Reaction Cross Sections将talys得到的数据绘制 微分截面（mb/Mev）- 中子能量(MeV)的中子能谱分布图，因能谱分布图数量较多，仅展示三个反应道各一个γ能量点的图，如图 6所示。图 6. 183W(γ,1n)182W、183W(γ,2n)181W、183W(γ,3n)180W中子能谱分布图例这些数据不仅揭示了中子产生机制，更为Geant4模拟提供了中子源的能谱特性和反应通道概率，是后续进行探测器效率分析的关键输入参数。(2)Geant4模拟 团队已完成Geant4模拟的几何构建，如图 7所示。图 7. 平坦效率谱仪（FED）的Geant4模拟几何图 8. 入射γ射线作用示意图如图 7和图 8所示，将世界体积设定为 1m×1m×1m 的立方体（半长 50cm），材质选用空气（G4_AIR），且视觉效果为透明。采用聚乙烯减体利用氢核与快中子的弹性散射，有效降低快中子的能量，进而提高热中子被氦 - 3 探测器捕获的概率，是中子减速过程的关键组件，中心靶区采用183W作为 γ 射线轰击的目标材料，探测器系统采用三环共轴阵列，屏蔽系统采取镉屏蔽层覆盖在聚乙烯主体，辐射源粒子类型设定为γ射线，完成几何构建。通过构建包含减速体、靶区、多层探测器和屏蔽层的复杂结构，Geant4模拟能够精确计算粒子在各材料中的输运过程。基于此，可以评估探测器对不同能量中子的响应情况，为实验装置的优化设计，如探测器几何布局调整、屏蔽厚度优化等，提供可靠的数据支撑。2.已取得的成绩项目团队在各类学科竞赛中取得了各类奖项共9项。其中包括第十五届全国大学生数学竞赛二等奖（国家级）、2023年湖南省大学生数学竞赛二等奖（省级）和2024年湖南省数学建模竞赛 省三在竞赛中掌握了Matlab/Python等数据处理工具能支撑本项目相关的数据分析。另外，项目组成员也取得了湖南省大学生英语网络写作大赛二等奖（省级），在竞赛中锻炼了英文写作能力，为项目后期发表相关学术论文奠定了技术基础。项目团队取得的相关成绩如下：（1）国家级：第十五届全国大学生数学竞赛二等奖（2）省级：2023年湖南省大学生数学竞赛二等奖（3）省级：2024年湖南省数学建模竞赛三等奖（4）省级：2022年湖南省大学生英语网络写作大赛二等奖（5）校级：2025年南华大学物理竞赛一等奖（6）校级：2023年南华大学数学竞赛一等奖（7）校级：2023-2024年度南华大学优秀学生（8）校级：2022-2023年南华大学一等奖学金（9）校级：2023-2024年南华大学 百优共青团员
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="c-lxyj-sub">
+                                                                            <div class="c-lxyj-sub-title">2.已具备的条件，尚缺少的条件及解决方法</div>
+                                                                            <div class="c-lxyj-sub-contet">
+                                                                                <p>已具备的条件： 软件学习已完成，并且已经完成了本年度的任务和目标，预计明年目标也可在今年完成。</p><p>尚缺少的条件和解决方法：&nbsp;</p><p>目前缺少对最优化几何的算法和模拟方法， 但是已有相关论文，可以将类似学习进行运用。</p>
+                                                                            </div>
+                                                                        </div>
+
+                                                            </div>
+                                                        </div>
+
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <!--  二、	立项依据（可加页） 结束-->
+                <!--  三、	经费预算 开始-->
+                <div class="c-base-info">
+                    <h4 class="c-base-info-title">
+                        三、	经费预算
+                    </h4>
+                    <div class="c-base-info-content">
+                        <table class="c-jfys-table">
+                            <thead>
+                                <tr class="text-center">
+                                    <th rowspan="2">
+                                        开支科目
+                                    </th>
+                                    <th rowspan="2">
+                                        预算经费（元）
+                                    </th>
+                                    <th rowspan="2">
+                                        主要用途
+                                    </th>
+                                    <th colspan="2">
+                                        阶段下达经费计划（元）
+                                    </th>
+                                </tr>
+                                <tr class="text-center">
+                                    <th>前半阶段</th>
+                                    <th>后半阶段</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    预算经费总额
+                                                </td>
+                                                <td class="text-center">
+                                                    10000.00
+                                                </td>
+                                                <td class="text-center">
+                                                    业务、软件学习，计算，分析、差旅，文献检索，实验材料等费用
+                                                </td>
+                                                <td class="text-center">
+                                                    7000.00
+                                                </td>
+                                                <td class="text-center">
+                                                    3000.00
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    1. 业务费
+                                                </td>
+                                                <td class="text-center">
+                                                    7000.00
+                                                </td>
+                                                <td class="text-center">
+                                                    无
+                                                </td>
+                                                <td class="text-center">
+                                                    5000.00
+                                                </td>
+                                                <td class="text-center">
+                                                    2000.00
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    （1）计算、分析、测试费
+                                                </td>
+                                                <td class="text-center">
+                                                    3500.00
+                                                </td>
+                                                <td class="text-center">
+                                                    无
+                                                </td>
+                                                <td class="text-center">
+                                                    2500.00
+                                                </td>
+                                                <td class="text-center">
+                                                    1000.00
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    （2）能源动力费
+                                                </td>
+                                                <td class="text-center">
+                                                    1000.00
+                                                </td>
+                                                <td class="text-center">
+                                                    无
+                                                </td>
+                                                <td class="text-center">
+                                                    500.00
+                                                </td>
+                                                <td class="text-center">
+                                                    500.00
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    （3）会议、差旅费
+                                                </td>
+                                                <td class="text-center">
+                                                    1000.00
+                                                </td>
+                                                <td class="text-center">
+                                                    无
+                                                </td>
+                                                <td class="text-center">
+                                                    1000.00
+                                                </td>
+                                                <td class="text-center">
+                                                    0.00
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    （4）文献检索费
+                                                </td>
+                                                <td class="text-center">
+                                                    500.00
+                                                </td>
+                                                <td class="text-center">
+                                                    无
+                                                </td>
+                                                <td class="text-center">
+                                                    500.00
+                                                </td>
+                                                <td class="text-center">
+                                                    0.00
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    （5）论文出版费
+                                                </td>
+                                                <td class="text-center">
+                                                    1000.00
+                                                </td>
+                                                <td class="text-center">
+                                                    无
+                                                </td>
+                                                <td class="text-center">
+                                                    500.00
+                                                </td>
+                                                <td class="text-center">
+                                                    500.00
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    2. 仪器设备购置费
+                                                </td>
+                                                <td class="text-center">
+                                                    1000.00
+                                                </td>
+                                                <td class="text-center">
+                                                    无
+                                                </td>
+                                                <td class="text-center">
+                                                    500.00
+                                                </td>
+                                                <td class="text-center">
+                                                    500.00
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    3. 实验装置试制费
+                                                </td>
+                                                <td class="text-center">
+                                                    1000.00
+                                                </td>
+                                                <td class="text-center">
+                                                    无
+                                                </td>
+                                                <td class="text-center">
+                                                    500.00
+                                                </td>
+                                                <td class="text-center">
+                                                    500.00
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    4. 材料费
+                                                </td>
+                                                <td class="text-center">
+                                                    1000.00
+                                                </td>
+                                                <td class="text-center">
+                                                    无
+                                                </td>
+                                                <td class="text-center">
+                                                    1000.00
+                                                </td>
+                                                <td class="text-center">
+                                                    0.00
+                                                </td>
+                                            </tr>
+                                        <tr class="text-center">
+                                            <td>
+                                                <b>学校批准经费</b>
+                                            </td>
+                                            <td colspan="4">
+                                                
+                                            </td>
+                                        </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--  三、	经费预算 结束-->
+                <!--  四、	指导教师意见 开始-->
+                <div class="c-base-info">
+                    <h4 class="c-base-info-title">
+                        四、	指导教师意见
+                    </h4>
+                    <div class="c-base-info-content">
+                        <table class="c-yijian-table">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div>
+                                                        <div class="c-yijian-content">
+                                                            &nbsp;
+                                                        </div>
+                                                        <div class="c-yijian-content">
+                                                            &nbsp;
+                                                        </div>
+
+                                            <div class="c-yijian-content">
+                                                &nbsp;
+                                            </div>
+                                            <div class="c-yijian-sign">
+                                                <div>导师（签章）：</div>
+                                                <div>&nbsp;&nbsp;年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日&nbsp;&nbsp;</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--  四、	指导教师意见 结束-->
+                            <!--  五、	院系大学生创新创业训练计划专家组意见  开始-->
+                            <div class="c-base-info">
+                                <h4 class="c-base-info-title">
+                                    五、	院系大学生创新创业训练计划专家组意见
+                                </h4>
+                                <div class="c-base-info-content">
+                                    <table class="c-yijian-table">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div>
+                                                        <div class="c-yijian-content">
+                                                            &nbsp;
+                                                        </div>
+                                                        <div class="c-yijian-content">
+                                                            &nbsp;
+                                                        </div>
+                                                    </div>
+                                                    <div class="c-yijian-content">
+                                                        &nbsp;
+                                                    </div>
+                                                    <div class="c-yijian-sign">
+                                                        <div>专家组组长（签章）：</div>
+                                                        <div>&nbsp;&nbsp;年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日&nbsp;&nbsp;</div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!--  五、	院系大学生创新创业训练计划专家组意见  结束-->
+                            <!--  六、	学校大学生创新创业训练计划专家组意见   开始-->
+                            <div class="c-base-info">
+                                <h4 class="c-base-info-title">
+                                    六、	学校大学生创新创业训练计划专家组意见
+                                </h4>
+                                <div class="c-base-info-content">
+                                    <table class="c-yijian-table">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div>
+                                                                                    <div class="c-yijian-content">
+                                                                                        &nbsp;
+                                                                                    </div>
+                                                                                    <div class="c-yijian-content">
+                                                                                        &nbsp;
+                                                                                    </div>
+
+                                                        <div class="c-yijian-content">
+                                                            &nbsp;
+                                                        </div>
+                                                        <div class="c-yijian-sign">
+                                                            <div>负责人（签章）：</div>
+                                                            <div>&nbsp;&nbsp;年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日&nbsp;&nbsp;</div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!--  六、	学校大学生创新创业训练计划专家组意见   结束-->
+                            <!--  七、	大学生创新创业训练计划领导小组审批意见 开始-->
+                            <div class="c-base-info">
+                                <h4 class="c-base-info-title">
+                                    七、	大学生创新创业训练计划领导小组审批意见
+                                </h4>
+                                <div class="c-base-info-content">
+                                    <table class="c-yijian-table">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div>
+                                                                    <div class="c-yijian-content">
+                                                                        审核通过
+                                                                    </div>
+
+                                                        <div class="c-yijian-content">
+                                                            &nbsp;
+                                                        </div>
+                                                        <div class="c-yijian-sign">
+                                                            <div>导师（签章）：</div>
+                                                            <div>&nbsp;&nbsp;年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日&nbsp;&nbsp;</div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!--  七、	大学生创新创业训练计划领导小组审批意见 结束-->
+
+
+            </div>
+        </div>
+        <div>
+            <table id="page-info-container" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <div style="mso-element:footer;" id="page-info-container--footer">
+                            <p class="MsoFooter" style="text-align:center;">
+                                <span style="mso-field-code:PAGE"><span style="mso-no-proof:yes"></span></span> / <span style="mso-field-code:NUMPAGES"></span>
+                            </p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+    </div>
+</body>
+</html>

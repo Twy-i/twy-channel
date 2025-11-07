@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<!--
+╔══════════════════════════════════════════════════════════════════╗
+║                    TWY's Channel - 学习空间                        ║
+║                                                                    ║
+║  📖 学习空间使用指南：                                               ║
+║  ─────────────────────────────────────────────────────────        ║
+║  1️⃣ 展示学习相关的照片（证书、奖状等）                                ║
+║  2️⃣ 展示学习相关的文档（PDF、Word等）                                ║
+║  3️⃣ 想添加更多内容？修改底部的 photos 和 documents 数组              ║
+╚══════════════════════════════════════════════════════════════════╝
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TWY's 学习空间</title>
+    
+    <!-- ==================== 样式区域 (CSS) ==================== -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding-bottom: 50px;
+        }
+
+        /* 顶部导航栏 */
+        .navbar {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 20px 40px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar h1 {
+            color: white;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        /* 返回按钮 */
+        .back-btn {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .back-btn:hover {
+            background-color: white;
+            color: #f5576c;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 主容器 */
+        .gallery-container {
+            max-width: 1400px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .gallery-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .gallery-header h2 {
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .gallery-header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        /* 照片网格布局 */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .photo-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .photo-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .photo-wrapper {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .photo-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .photo-item:hover .photo-wrapper img {
+            transform: scale(1.1);
+        }
+
+        .placeholder-icon {
+            font-size: 4rem;
+            color: #bbb;
+        }
+
+        .photo-info {
+            padding: 20px;
+        }
+
+        .photo-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .photo-description {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* 文档区域样式 */
+        .documents-section {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 2px solid rgba(240, 147, 251, 0.2);
+        }
+
+        .documents-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .documents-header h3 {
+            color: #333;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .documents-header p {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        .documents-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .document-item {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .document-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+
+        .document-icon {
+            font-size: 3rem;
+            flex-shrink: 0;
+        }
+
+        .document-info {
+            flex-grow: 1;
+        }
+
+        .document-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .document-item:hover .document-title,
+        .document-item:hover .document-description {
+            color: white;
+        }
+
+        .document-description {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 15px 20px;
+            }
+
+            .navbar h1 {
+                font-size: 1.3rem;
+            }
+
+            .photo-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 15px;
+            }
+
+            .gallery-header h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .photo-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .back-btn {
+                padding: 8px 20px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- 顶部导航栏 -->
+    <nav class="navbar">
+        <h1>📚 TWY's 学习空间</h1>
+        <a href="index.html" class="back-btn">← 返回首页</a>
+    </nav>
+
+    <!-- 主容器 -->
+    <div class="gallery-container">
+        
+        <!-- 证书照片区域 -->
+        <div class="gallery-header">
+            <h2>我的荣誉证书</h2>
+            <p>记录学习成长的每一步</p>
+        </div>
+
+        <div class="photo-grid">
+            <!-- 照片会在这里自动显示 -->
+        </div>
+
+        <!-- 文档区域 -->
+        <div class="documents-section">
+            <div class="documents-header">
+                <h3>📄 学习文档</h3>
+                <p>重要学习资料</p>
+            </div>
+            <div class="documents-grid">
+                <!-- 文档会自动通过 JavaScript 生成 -->
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ==================== 功能代码区域 ==================== -->
+    <script>
+        // 💡 ============================================
+        // 💡 批量添加证书图片
+        // 💡 ============================================
+        // 格式：[图片路径, 标题, 描述]
+        const photos = [
+            ['证书、论文/2023年数学竞赛省二.jpg', '2023年数学竞赛省二', '数学竞赛省级二等奖'],
+            ['证书、论文/一等学奖金.jpg', '一等奖学金', '学业优秀奖励'],
+            ['证书、论文/优团.png', '优秀团员', '共青团优秀团员荣誉'],
+            ['证书、论文/优秀学生.jpg', '优秀学生', '优秀学生荣誉称号'],
+            ['证书、论文/数学建模竞赛.jpg', '数学建模竞赛', '数学建模省三'],
+            ['证书、论文/数学建模国一公示表.jpg', '数学建模国一公示表', '数学建模国家一等奖'],
+            ['证书、论文/数学竞赛国二证书.jpg', '数学竞赛国二', '数学竞赛国家级二等奖'],
+            ['证书、论文/百优共青团员.jpg', '百优共青团员', '百名优秀共青团员'],
+            ['证书、论文/大创/{8DC610DE-5AB5-409C-B884-A182A8FC8931}.png', '大创项目证书', '大学生创新创业项目证书'],
+            
+            // 💡 想添加更多图片？继续在这里添加！
+            // ['证书、论文/your-photo.jpg', '照片标题', '描述文字'],
+        ];
+
+        // 💡 ============================================
+        // 💡 批量添加学习文档
+        // 💡 ============================================
+        // 格式：[文件路径, 标题, 描述, 图标]
+        const documents = [
+            // 英语成绩
+            ['证书、论文/六级成绩单.pdf', 'CET-6 成绩单', '英语六级成绩单', '📋'],
+            
+            // 竞赛证书PDF
+            ['证书、论文/第十一届统计建模大赛省赛证书.pdf', '统计建模省赛证书', '第十一届统计建模大赛省级证书', '🏆'],
+                   
+            // 综合证书
+            ['证书、论文/证书.pdf', '综合证书', '其他获奖证书', '📜'],
+            
+            // 大创项目
+            ['证书、论文/大创/南华大学_堆用关键核素183W光中子反应的蒙特卡罗模拟与平坦探测效率谱仪结构优化_2025年08月27日21时53分29秒.pdf', '大创项目结题报告', '大学生创新训练计划项目', '📚'],
+            
+            // 💡 想添加更多文档？继续在这里添加！
+            // ['证书、论文/your-document.pdf', '文档标题', '描述文字', '📄'],
+        ];
+
+        // 自动生成照片相册
+        function generateGallery() {
+            const photoGrid = document.querySelector('.photo-grid');
+            
+            photoGrid.innerHTML = '';
+            
+            photos.forEach((photo, index) => {
+                const [src, title, description] = photo;
+                
+                const photoItem = document.createElement('div');
+                photoItem.className = 'photo-item';
+                photoItem.innerHTML = `
+                    <div class="photo-wrapper">
+                        <img 
+                            src="${src}" 
+                            alt="${title}"
+                            loading="lazy"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+                        >
+                        <span class="placeholder-icon" style="display:none;">🏆</span>
+                    </div>
+                    <div class="photo-info">
+                        <div class="photo-title">${title}</div>
+                        <div class="photo-description">${description}</div>
+                    </div>
+                `;
+                
+                photoItem.addEventListener('click', function() {
+                    const img = this.querySelector('img');
+                    if (img && img.src) {
+                        window.open(img.src, '_blank');
+                    }
+                });
+                
+                photoGrid.appendChild(photoItem);
+            });
+            
+            const count = photos.length;
+            const header = document.querySelector('.gallery-header p');
+            if (header) {
+                header.textContent = `记录学习成长的每一步 · 共 ${count} 个荣誉`;
+            }
+        }
+
+        // 自动生成文档列表
+        function generateDocuments() {
+            const documentsGrid = document.querySelector('.documents-grid');
+            
+            if (!documentsGrid) return;
+            
+            documentsGrid.innerHTML = '';
+            
+            documents.forEach((doc) => {
+                const [src, title, description, icon] = doc;
+                
+                const docItem = document.createElement('div');
+                docItem.className = 'document-item';
+                docItem.innerHTML = `
+                    <div class="document-icon">${icon}</div>
+                    <div class="document-info">
+                        <div class="document-title">${title}</div>
+                        <div class="document-description">${description}</div>
+                    </div>
+                `;
+                
+                docItem.addEventListener('click', function() {
+                    window.open(src, '_blank');
+                });
+                
+                documentsGrid.appendChild(docItem);
+            });
+            
+            const header = document.querySelector('.documents-header p');
+            if (header && documents.length > 0) {
+                header.textContent = `重要学习资料 · 共 ${documents.length} 个文档`;
+            }
+        }
+
+        // 页面加载完成后生成内容
+        document.addEventListener('DOMContentLoaded', function() {
+            generateGallery();
+            generateDocuments();
+        });
+    </script>
+
+</body>
+</html>
+

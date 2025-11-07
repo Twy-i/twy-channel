@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<!--
+               ║
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TWY's Channel</title>
+    
+    <!-- ==================== 样式区域 (CSS) ==================== -->
+    <!-- 这里控制网页的外观、颜色、大小、动画等 -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 页面整体背景样式 */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            /* 💡 修改背景颜色：改这里的 #667eea 和 #764ba2 */
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        /* 标题样式 "Welcome to TWY's Channel" */
+        h1 {
+            color: #ffffff;  /* 💡 修改标题颜色：改这里 */
+            font-size: 3.5rem;  /* 💡 修改标题大小：改这里的数字，越大越大 */
+            font-weight: 700;
+            margin-bottom: 3rem;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+            letter-spacing: 2px;
+        }
+
+        /* 按钮容器 */
+        .buttons-container {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* 按钮样式 */
+        .enter-btn {
+            display: inline-block;
+            padding: 18px 50px;
+            font-size: 1.3rem;
+            color: #ffffff;
+            border: 3px solid white;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .enter-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            background-color: white;
+        }
+
+        /* 生活空间按钮悬停效果 */
+        .life-btn:hover {
+            color: #667eea;
+        }
+
+        /* 学习空间按钮悬停效果 */
+        .study-btn:hover {
+            color: #f5576c;
+        }
+
+        .enter-btn:active {
+            transform: translateY(-2px);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .buttons-container {
+                gap: 20px;
+            }
+
+            .enter-btn {
+                font-size: 1.2rem;
+                padding: 15px 40px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .buttons-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .enter-btn {
+                font-size: 1rem;
+                padding: 12px 35px;
+                width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- ==================== 网页内容区域 ==================== -->
+    <!-- 这里是网页显示的实际内容 -->
+    
+    <!-- 💡 如果要在页面最上方添加内容，在这里添加 -->
+    <!-- 例如：<div class="header">顶部内容</div> -->
+    
+    <div class="container">
+        <!-- 💡 如果要在标题上方添加内容（标题和按钮之间），在这里添加 -->
+        <!-- 例如：<p>欢迎语</p> -->
+        
+        <h1>Welcome to TWY's Channel</h1>
+        <!-- 💡 如果要修改标题文字，改上面这一行的文字 -->
+        
+        <!-- 💡 如果要在标题和按钮之间添加内容，在这里添加 -->
+        <!-- 例如：<p style="color: white; margin: 20px 0;">这是一段描述</p> -->
+        
+        <div class="buttons-container">
+            <a href="main.html" class="enter-btn life-btn">🌸 生活空间</a>
+            <a href="study.html" class="enter-btn study-btn">📚 学习空间</a>
+        </div>
+        <!-- 💡 如果要修改按钮文字，改上面两行的按钮文字 -->
+        
+        <!-- 💡 如果要在按钮下方添加内容，在这里添加 -->
+        <!-- 例如：<p style="color: white; margin-top: 20px;">更多信息</p> -->
+    </div>
+    
+    <!-- 💡 如果要在页面最下方添加内容，在这里添加 -->
+    <!-- 例如：<div class="footer">底部内容</div> -->
+
+    <!-- ==================== 功能代码区域 (JavaScript) ==================== -->
+    <!-- 这里控制网页的交互功能 -->
+    <script>
+        // 💡 现在使用直接链接跳转，不需要JavaScript函数
+        // 💡 如果需要添加其他交互功能，可以在这里编写代码
+    </script>
+</body>
+</html>
+
